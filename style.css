@@ -114,3 +114,35 @@ footer {
         padding: 10px;
     }
 }
+/* 🔥 Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Apply Fade-In to Sections */
+section {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* 🔥 Glowing Hover Effect for Menu */
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* 🔥 Scroll Animation (Hidden by Default) */
+.slide-in {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
