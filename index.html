@@ -46,5 +46,23 @@
     <footer>
         <p>Follow me on social media!</p>
     </footer>
+	<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let elements = document.querySelectorAll(".slide-in");
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = "translateX(0)";
+                    entry.target.style.opacity = "1";
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+    });
+</script>
+</body>
+</html>
+
 </body>
 </html>
