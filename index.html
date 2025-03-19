@@ -7,6 +7,22 @@
     <title>our lovely moments</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let elements = document.querySelectorAll(".slide-in");
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transform = "translateX(0)";
+                    entry.target.style.opacity = "1";
+                }
+            });
+        });
+
+        elements.forEach(el => observer.observe(el));
+    });
+</script>
+
 <body>
     <header>
         <h1>Welcome Pooja a short surprise for you</h1>
